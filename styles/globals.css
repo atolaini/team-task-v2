@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --base-font-size: 1rem;
+  --font-scale: 1.25;
+  --h6-size: calc((var(--base-font-size) * var(--font-scale)));
+  --h5-size: calc((var(--h6-size) * var(--font-scale)));
+  --h4-size: calc((var(--h5-size) * var(--font-scale)));
+  --h3-size: calc((var(--h4-size) * var(--font-scale)));
+  --h2-size: calc((var(--h3-size) * var(--font-scale)));
+  --h1-size: calc((var(--h2-size) * var(--font-scale)));
+
+  --gradient: linear-gradient(
+    45deg,
+    rgba(0, 0, 255, 1) 0%,
+    rgba(0, 128, 0, 1) 89%
+  );
+}
+
+body {
+  background: var(--gradient);
+  font-size: var(--base-font-size);
+  @apply p-4 h-full;
+}
+
+@layer components {
+  .btn {
+    @apply bg-sr-blue text-white rounded-md px-8 py-2 text-lg ease-in-out duration-300 uppercase hover:bg-sr-blue/80 hover:scale-105;
+  }
+}
+
+p {
+  font-size: var(--base-font-size);
+}
+
+h1 {
+  font-size: var(--h1-size);
+}
+
+h2 {
+  font-size: var(--h2-size);
+}
+
+h3 {
+  font-size: var(--h3-size);
+}
+
+h4 {
+  font-size: var(--h4-size);
+}
+
+h5 {
+  font-size: var(--h5-size);
+}
+
+h6 {
+  font-size: var(--h6-size);
+}
