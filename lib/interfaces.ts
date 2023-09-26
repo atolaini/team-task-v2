@@ -15,3 +15,11 @@ export interface CardProps {
   children: React.ReactNode;
   className?: string;
 }
+
+export interface UserProps {
+  firstName: string;
+  lastName: string;
+  name: string;
+  isFed: boolean;
+  clerkId: string;
+}

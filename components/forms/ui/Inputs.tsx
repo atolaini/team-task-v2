@@ -12,7 +12,7 @@ export const FormControl = ({ children, label }: FormControlProps) => {
 };
 
 export const Input = React.forwardRef<HTMLInputElement, InputProps>(
-  ({ type, className, label, ...props }, ref) => {
+  ({ type, className, label, children, ...props }, ref) => {
     return (
       <FormControl label={label}>
         <input
@@ -21,6 +21,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
           {...props}
           ref={ref}
         />
+        {children}
       </FormControl>
     );
   }

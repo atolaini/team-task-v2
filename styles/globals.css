@@ -29,6 +29,12 @@ body {
   .btn {
     @apply bg-sr-blue text-white rounded-md px-8 py-2 text-lg ease-in-out duration-300 uppercase hover:bg-sr-blue/80 hover:scale-105;
   }
+
+  .btn:disabled {
+    opacity: 0.2;
+    filter: grayscale(1);
+    pointer-events: none;
+  }
 }
 
 p {
