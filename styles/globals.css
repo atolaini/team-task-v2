@@ -35,6 +35,10 @@ body {
     filter: grayscale(1);
     pointer-events: none;
   }
+
+  .sideBar {
+    @apply flex flex-col fixed bottom-6 w-[calc(100vw-3.7rem)] bg-slate-50/60 border-white/50 border-2 rounded-md p-4 basis-[20%] items-center lg:h-[calc(100vh-3.5rem)] lg:basis-[25%] lg:relative lg:bottom-auto lg:items-start;
+  }
 }
 
 p {
